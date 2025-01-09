@@ -15,10 +15,12 @@
 The study identifies strong ordering and labeling biases in LLM responses. For instance, models often favor responses labeled as “A,” regardless of the content of the question. These biases suggest that model outputs may be influenced more by superficial prompt features than by the semantic meaning of the questions.
 
 ![Survey Responses Biased to A](img1.png)
+
 2.  **High Entropy and Uniformity**
 Across 43 models ranging from 110M to 175B parameters, responses often showed unnaturally high entropy. This means that models distribute probabilities more evenly across answers than real human populations. Even instruction-tuned models, designed to better align with user intentions, fail to produce distributions that meaningfully mirror human data.
 
 ![High Entropy](img3.png)
+
 3.  **Lack of Human-Like Trends**
 When comparing model responses to census data, the researchers observed that models align more closely with a uniform baseline than with any human subpopulation. This undermines claims that LLMs can represent specific demographic groups or emulate nuanced human opinions.
 4.  **The Role of Instruction Tuning**
