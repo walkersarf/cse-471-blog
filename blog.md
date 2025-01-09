@@ -13,13 +13,18 @@
 ## Key Findings of the Study
 1.  **Systematic Biases in Labeling and Ordering**  
 The study identifies strong ordering and labeling biases in LLM responses. For instance, models often favor responses labeled as “A,” regardless of the content of the question. These biases suggest that model outputs may be influenced more by superficial prompt features than by the semantic meaning of the questions.
-![Survey Responses](img1.png)
+
+![Survey Responses Biased to A](img1.png)
 2.  **High Entropy and Uniformity**
 Across 43 models ranging from 110M to 175B parameters, responses often showed unnaturally high entropy. This means that models distribute probabilities more evenly across answers than real human populations. Even instruction-tuned models, designed to better align with user intentions, fail to produce distributions that meaningfully mirror human data.
+
+![High Entropy](img3.png)
 3.  **Lack of Human-Like Trends**
 When comparing model responses to census data, the researchers observed that models align more closely with a uniform baseline than with any human subpopulation. This undermines claims that LLMs can represent specific demographic groups or emulate nuanced human opinions.
 4.  **The Role of Instruction Tuning**
 Instruction tuning, a common technique to improve LLM alignment, was also evaluated in the study. While instruction-tuned models showed greater variability in their responses compared to base models, they still exhibited high entropy and lacked meaningful alignment with human data. This finding challenges the effectiveness of tuning as a solution to these limitations.
+
+![Instruction Tuning](img2.png)
 
 ## Implications for Survey-Based Research
 The findings call into question the reliability of surveys for evaluating LLM alignment and biases:
@@ -37,3 +42,4 @@ The reliance on survey-based methods also raises ethical questions. If LLMs are 
 
 The study provides a sobering reminder that methodologies borrowed from human social sciences do not seamlessly translate to LLMs. While surveys offer a structured approach, their limitations must be acknowledged to avoid drawing misguided conclusions. As LLMs become increasingly integrated into decision-making processes, ensuring the robustness of evaluation methods is more critical than ever.
 Dominguez-Olmedo et al.’s work serves as a crucial checkpoint, prompting researchers to question assumptions and refine their approaches. By addressing the challenges of survey-based evaluations, the AI community can move toward more accurate, fair, and impactful assessments of LLMs. The journey to understanding these models is far from over, but with rigorous inquiry and innovation, it holds great promise.
+
