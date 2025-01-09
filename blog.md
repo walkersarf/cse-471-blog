@@ -8,7 +8,7 @@
  
  ## Introduction
  Surveys are used for statistical analysis about characteristics, values and opinions of people. Since large language models (LLM) have the potential to answer questions, LLMs are often used to respond to questionnaire. Unlike humans, LLMs interpret and respond to prompts based on their training data and architecture, making it unclear whether survey responses accurately reflect meaningful insights about the models.
- The paper **"Questioning the Survey Responses of Large Language Models,"** presented at NeurIPS 2024 by Ricardo Dominguez-Olmedo, Moritz Hardt, and Celestine Mendler-Dünner, critically examines this methodology. By analyzing 43 LLMs using standardized surveys like the American Community Survey (ACS), the authors identify key limitations and biases that challenge the validity of using surveys to evaluate LLMs. This work highlights the need for cautious interpretation and refinement of methods for assessing LLM behavior.
+ The paper **"Questioning the Survey Responses of Large Language Models,"** presented at NeurIPS 2024 by Ricardo Dominguez-Olmedo, Moritz Hardt, and Celestine Mendler-Dünner, critically examines this methodology. For every survery question, they generated a prompt containing multiple choice question and collected LLM's probability distribution over answer choices. By analyzing 43 LLMs of size varying from 110M to 175B parameters: ranging from GPT-2 from 2019 to GPT-4 from 2023, they compared with 2019 U.S. Census Bureau data. Here the authors identify key limitations and biases that challenge the validity of using surveys to evaluate LLMs. This work highlights the need for cautious interpretation and refinement of methods for assessing LLM behavior.
  
 ## Key Findings of the Study
 1.  **Systematic Biases in Labeling and Ordering**  
@@ -34,6 +34,15 @@ The findings call into question the reliability of surveys for evaluating LLM al
 -   **Bias Misinterpretation**: Observed "alignments" may simply result from entropy differences in subgroup responses, not genuine alignment with specific human characteristics or values.
 -   **Need for Methodological Rigor**: Adjusting for systematic biases is essential, but even this may not suffice to produce robust insights. Researchers must critically assess whether survey-based methods truly capture the desired properties of LLMs.
 
+## Proposed Solution
+1.  **Bias Mitigation**: Addressing labeling and ordering effects in prompts is essential. Randomizing answer choices and minimizing spurious patterns in prompts can help reduce systematic biases.
+    
+2.  **Alternative Metrics**: Exploring beyond survey-style evaluations to better capture inherent model properties. For instance, designing tasks that evaluate contextual understanding or scenario-based decision-making may yield more meaningful insights.
+    
+3.  **Tailored Benchmarks**: Developing benchmarks specifically designed for LLM evaluation rather than adapting human-centric tools. These benchmarks should be informed by the unique characteristics of LLMs and their operational contexts.
+    
+4.  **Interdisciplinary Approaches**: Collaborating with experts in social science, linguistics, and cognitive psychology to design evaluation methods that better align with human behavior and cognition.
+   
 ## Expanding the Scope of Evaluation
 Beyond surveys, researchers could explore alternative methodologies such as naturalistic interaction testing, where models are evaluated based on their performance in realistic conversational or decision-making scenarios. Additionally, employing diagnostic tools that analyze model internals, such as attention patterns and token probabilities, can provide deeper insights into model behavior.
 
